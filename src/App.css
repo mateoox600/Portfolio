@@ -71,7 +71,7 @@
 }
 
 #technos>img {
-  width: 7.5vw;
+  width: 5vw;
   padding: 2vw;
   margin: 0.5vw;
   border-radius: 15px;
@@ -107,14 +107,14 @@
 }
 
 @media (max-width: 1000px) {
-  #technos>img {
-    flex: 0 0 15%;
+  #technos>img, .contact-link {
+    flex: 0 0 10% !important;
   }
 }
 
 @media (max-width: 650px) {
   #techno-title, .projects-title, .contact-title {
-    font-size: 6vw;
+    font-size: 6vw !important;
   }
 
   #presentation>p {
@@ -123,13 +123,13 @@
 }
 
 @media (max-width: 400px) {
-  #technos>img {
-    flex: 0 0 20%;
+  #technos>img, .contact-link {
+    flex: 0 0 15% !important;
   }
 }
 
 #contact {
-  min-height: 25vh;
+  min-height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,8 +142,9 @@
   font-size: 3vw;
 }
 
-#contacts {
-  min-height: 15vh;
+.contacts {
+  min-height: 25vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,8 +152,10 @@
   flex-wrap: wrap;
 }
 
-.contact-link>img {
+.contact-link {
+  display: block;
   width: 5vw;
+  aspect-ratio: 1/1;
   padding: 2vw;
   margin: 0.5vw;
   border-radius: 15px;
@@ -161,7 +164,11 @@
   transition: all 0.25s ease-in-out;
 }
 
-.contact-link:hover>img {
+.contact-link>img {
+  width: 100%;
+}
+
+.contact-link:hover {
   background-color: #2b2b4d;
   transform: scale(1.1);
 }
@@ -171,5 +178,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 1.5em;
 }

@@ -85,8 +85,8 @@ function App() {
         <div className='section' id='contact'>
           <h1 className='contact-title'>Contact Me</h1>
           <div className='contacts'>
-            <a className='contact-link' href="https://github.com/mateoox600"><img src={github} alt="" /></a>
-            <a className='contact-link' href="https://www.linkedin.com/in/mathys-g"><img src={linkedIn} alt="" /></a>
+            <a className='contact-link' href="https://github.com/mateoox600" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
+            <a className='contact-link' href="https://www.linkedin.com/in/mathys-g" target='_blank' rel='noreferrer'><img src={linkedIn} alt="" /></a>
           </div>
         </div>
       </main>
