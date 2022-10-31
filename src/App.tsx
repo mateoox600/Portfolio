@@ -6,11 +6,12 @@ import './App.css';
 import html from './knowledge/html.png';
 import css from './knowledge/css.png';
 import js from './knowledge/js.png';
+import typescript from './knowledge/typescript.png';
+import react from './knowledge/react.png';
 import node from './knowledge/node.png';
 import php from './knowledge/php.png';
 import java from './knowledge/java.png';
 import cpp from './knowledge/cpp.png';
-import typescript from './knowledge/typescript.png';
 import python from './knowledge/python.png';
 
 import cxplorer from './projects/c-xplorer.png';
@@ -37,6 +38,7 @@ function App() {
             <img src={css} alt="" />
             <img src={js} alt="" />
             <img src={typescript} alt="" />
+            <img src={react} alt="" />
             <img src={node} alt="" />
             <img src={php} alt="" />
             <img src={java} alt="" />
