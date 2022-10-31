@@ -10,6 +10,8 @@ import node from './knowledge/node.png';
 import php from './knowledge/php.png';
 import java from './knowledge/java.png';
 import cpp from './knowledge/cpp.png';
+import typescript from './knowledge/typescript.png';
+import python from './knowledge/python.png';
 
 import cxplorer from './projects/c-xplorer.png';
 import newtab from './projects/newtab.png';
@@ -35,10 +37,12 @@ function App() {
             <img src={html} alt="" />
             <img src={css} alt="" />
             <img src={js} alt="" />
+            <img src={typescript} alt="" />
             <img src={node} alt="" />
             <img src={php} alt="" />
             <img src={java} alt="" />
             <img src={cpp} alt="" />
+            <img src={python} alt="" />
           </div>
         </div>
         <div className='section' id='projects'>
@@ -48,7 +52,7 @@ function App() {
               <h1>This portfolio</h1>
               <p>The portfolio you are currently browsing is open source ! you can see the code on my github.</p>
               <div className='links'>
-
+                <a href="https://github.com/mateoox600/Portfolio" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
               </div>
             </div>
             <div className='project' style={{ backgroundImage: `url(${cxplorer})` }}>
