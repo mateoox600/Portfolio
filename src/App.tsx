@@ -26,8 +26,7 @@ function App() {
       <main className='main'>
         <div className='section' id='presentation'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ex nihil pariatur placeat perspiciatis corporis eum consequuntur delectus quaerat qui quo magni ducimus hic, voluptatibus totam, consequatur accusamus tempore fuga.
-            Id, vero ut. Distinctio sunt maxime odit neque unde voluptatem nulla at tenetur. Dignissimos iure dicta sint aliquam voluptate provident fugiat cupiditate odio. Voluptate sapiente assumenda, ipsum porro tempore nam?
+            Hi, my name is Mathys Gasnier, i love programming since i was a kid. I started with java, and i evolved to others technologies like javascript and c++. I love programming because it gives me challenge and makes me think outside the box. In my career i would like to manage teams or even projects.
           </p>
         </div>
         <div className='section' id='techno'>
