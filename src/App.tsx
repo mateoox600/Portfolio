@@ -23,7 +23,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className='header-spacer'></div>
       <main className='main'>
         <div className='section' id='presentation'>
           <p>
