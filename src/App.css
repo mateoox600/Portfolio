@@ -55,13 +55,13 @@
   padding-bottom: 5vh;
 }
 
-#techno-title {
+.techno-title {
   margin: 2vw;
   margin-bottom: 2vw;
   font-size: 3vw;
 }
 
-#technos {
+.technos {
   min-height: 25vh;
   display: flex;
   justify-content: center;
@@ -70,7 +70,7 @@
   flex-wrap: wrap;
 }
 
-#technos>img {
+.technos>img {
   width: 5vw;
   padding: 2vw;
   margin: 0.5vw;
@@ -80,7 +80,7 @@
   transition: all 0.25s ease-in-out;
 }
 
-#technos>img:hover {
+.technos>img:hover {
   background-color: #2b2b4d;
   transform: scale(1.1);
 }
@@ -162,13 +162,13 @@ footer {
 }
 
 @media (max-width: 1000px) {
-  #technos>img, .contact-link {
+  .technos>img, .contact-link {
     flex: 0 0 10%;
   }
 }
 
 @media (max-width: 650px) {
-  #techno-title, .projects-title, .contact-title {
+  .techno-title, .projects-title, .contact-title {
     font-size: 6vw;
   }
 
@@ -182,7 +182,7 @@ footer {
 }
 
 @media (max-width: 400px) {
-  #technos>img, .contact-link {
+  .technos>img, .contact-link {
     flex: 0 0 15%;
   }
 }

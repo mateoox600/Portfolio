@@ -32,8 +32,8 @@ function App() {
           </p>
         </div>
         <div className='section' id='techno'>
-          <h1 id='techno-title'>Knowledge</h1>
-          <div id='technos'>
+          <h1 className='techno-title'>Knowledge</h1>
+          <div className='technos'>
             <img src={html} alt="" />
             <img src={css} alt="" />
             <img src={js} alt="" />
