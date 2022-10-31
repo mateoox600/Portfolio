@@ -16,8 +16,8 @@ import python from './knowledge/python.png';
 import cxplorer from './projects/c-xplorer.png';
 import newtab from './projects/newtab.png';
 
-import openNew from './openNew.svg';
-import github from './github.png';
+import openNew from './icons/openNew.svg';
+import github from './icons/github.png';
 
 function App() {
   return (
