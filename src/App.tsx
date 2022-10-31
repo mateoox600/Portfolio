@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header/Header';
+import Project from './project/Project';
 import './App.css';
-import gull from './projects/gull.jpg';
 
 import html from './knowledge/html.png';
 import css from './knowledge/css.png';
@@ -18,6 +18,7 @@ import newtab from './projects/newtab.png';
 
 import openNew from './icons/openNew.svg';
 import github from './icons/github.png';
+import linkedIn from './icons/linkedIn.png';
 
 function App() {
   return (
@@ -46,35 +47,46 @@ function App() {
         <div className='section' id='projects'>
           <h1 className='projects-title'>My projects</h1>
           <div className='projects-grid'>
-            <div className='project' style={{ backgroundImage: `url(${gull})` }}>
-              <h1>This portfolio</h1>
-              <p>The portfolio you are currently browsing is open source ! you can see the code on my github.</p>
-              <div className='links'>
-                <a href="https://github.com/mateoox600/Portfolio" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
-              </div>
-            </div>
-            <div className='project' style={{ backgroundImage: `url(${cxplorer})` }}>
-              <h1>C-Xplorer</h1>
-              <p>A file explorer made with C++ and a library named raylib.</p>
-              <div className='links'>
-                <a href="https://github.com/mateoox600/c-xplorer" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
-              </div>
-            </div>
-            <div className='project' style={{ backgroundImage: `url(${gull})` }}>
-              <h1>LuvaGameEngine</h1>
-              <p>A game engine made with java, where you programm your game in lua</p>
-              <div className='links'>
-                <a href="https://github.com/mateoox600/LuvaGameEngine" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
-              </div>
-            </div>
-            <div className='project' style={{ backgroundImage: `url(${newtab})` }}>
-              <h1>NewTab</h1>
-              <p>A web page to replace the default browser new tab page. Has an animated background, a configurable search bar and a time display</p>
-              <div className='links'>
-                <a href="google.com" target='_blank'><img src={openNew} alt="" /></a>
-                <a href="https://github.com/mateoox600/NewTab" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
-              </div>
-            </div>
+            <Project
+              name='This portfolio'
+              description='The portfolio you are currently browsing is open source ! you can see the code on my github.'
+              backgroundImage={null}
+              links={[
+                { link: 'https://github.com/mateoox600/Portfolio', img: github }
+              ]}
+            />
+            <Project
+              name='C-Xplorer'
+              description='A file explorer made with C++ and a library named raylib.'
+              backgroundImage={cxplorer}
+              links={[
+                { link: 'https://github.com/mateoox600/c-xplorer', img: github }
+              ]}
+            />
+            <Project
+              name='LuvaGameEngine'
+              description='A game engine made with java, where you code your game in lua'
+              backgroundImage={null}
+              links={[
+                { link: 'https://github.com/mateoox600/LuvaGameEngine', img: github }
+              ]}
+            />
+            <Project
+              name='NewTab'
+              description='A web page to replace the default browser new tab page. Has an animated background, a configurable search bar and a time display'
+              backgroundImage={newtab}
+              links={[
+                { link: 'google.com', img: openNew },
+                { link: 'https://github.com/mateoox600/NewTab', img: github }
+              ]}
+            />
+          </div>
+        </div>
+        <div className='section' id='contact'>
+          <h1 className='contact-title'>Contact Me</h1>
+          <div className='contacts'>
+            <a className='contact-link' href="https://github.com/mateoox600"><img src={github} alt="" /></a>
+            <a className='contact-link' href="https://www.linkedin.com/in/mathys-g"><img src={linkedIn} alt="" /></a>
           </div>
         </div>
       </main>

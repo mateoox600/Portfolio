@@ -1,0 +1,69 @@
+
+.project {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 2.5vw;
+  width: 25vw;
+  height: 25vw;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom 10%;
+}
+
+@media (max-width: 1000px) {
+  .project {
+    flex: 0 0 100%;
+    height: 50vw;
+  }
+
+}
+
+.project>h1 {
+  width: 100%;
+  text-align: center;
+  padding: 1vw 0;
+  background: linear-gradient(180deg, #121225 15%, #12122500 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.project>p {
+  padding: 2vw;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-image: linear-gradient(180deg, #121225 15%, #12122500 100%);
+}
+
+.project:hover>p {
+  opacity: 1;
+}
+
+.project:hover>h1 {
+  background-color: #121225;
+}
+
+.project:hover>.links {
+  opacity: 1;
+}
+
+.links {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.links>a {
+  flex: 0 0 10%;
+  width: 7.5%;
+  height: 7.5%;
+  margin: 2.5%;
+}
+
+.links>a>img {
+  width: 100%;
+  height: 100%;
+}
