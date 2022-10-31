@@ -1,38 +1,207 @@
 .App {
-  text-align: center;
+  background-color: #121225;
+  width: 100vw;
+  min-height: 200vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.header-spacer {
+  width: 100vw;
+  height: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+}
+
+.section {
+  width: 100vw;
+  min-height: calc(100vh - 100px);
+  border-bottom: 1px #0b0b1b solid;
+  /*padding-top: 100px;*/
+}
+
+.section:not(:first-child) {
+  padding-top: 75px;
+}
+
+.section:last-child {
+  padding-bottom: 50px;
+}
+
+#presentation {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#presentation>p {
+  width: 75vw;
+  font-size: 24px;
+  line-height: 135%;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#techno {
+  min-height: 35vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5vh;
+}
+
+#techno-title {
+  margin: 2vw;
+  margin-bottom: 2vw;
+  font-size: 3vw;
+}
+
+#technos {
+  min-height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#technos>img {
+  width: 7.5vw;
+  padding: 2vw;
+  margin: 0.5vw;
+  border-radius: 15px;
+  background-color: #20203f;
+  border: #0b0b1b 1px solid;
+  transition: all 0.25s ease-in-out;
+}
+
+#technos>img:hover {
+  background-color: #2b2b4d;
+  transform: scale(1.1);
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects-title {
+  margin: 2vw;
+  font-size: 3vw;
+}
+
+.projects-grid {
+  min-height: 100vh;
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 2.5vw;
+  width: 25vw;
+  height: 25vw;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom 10%;
+}
+
+@media (max-width: 1000px) {
+  .project {
+    flex: 0 0 100%;
+    height: 50vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  #technos>img {
+    flex: 0 0 15%;
   }
+}
+
+@media (max-width: 650px) {
+  #techno-title {
+    font-size: 6vw;
+  }
+  
+  .projects-title {
+    font-size: 6vw;
+  }
+
+  #presentation>p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  #technos>img {
+    flex: 0 0 20%;
+  }
+}
+
+.project>h1 {
+  width: 100%;
+  text-align: center;
+  padding: 1vw 0;
+  background: linear-gradient(180deg, #121225 15%, #12122500 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.project>p {
+  padding: 2vw;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-image: linear-gradient(180deg, #121225 15%, #12122500 100%);
+}
+
+.links {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.links>a {
+  flex: 0 0 10%;
+  width: 7.5%;
+  height: 7.5%;
+  margin: 2.5%;
+}
+
+.links>a>img {
+  width: 100%;
+  height: 100%;
+}
+
+.project:hover>p {
+  opacity: 1;
+}
+
+.project:hover>h1 {
+  background-color: #121225;
+}
+
+.project:hover>.links {
+  opacity: 1;
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
 }
