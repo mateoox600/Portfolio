@@ -26,6 +26,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .nav {
@@ -40,6 +41,7 @@
     padding: 10px;
     cursor: pointer;
     font-size: 2em;
+    font-family: 'Raleway', sans-serif;
 }
 
 .burger-nav {
@@ -53,6 +55,7 @@
 
 .burger-item {
     display: none;
+    font-family: 'Raleway', sans-serif;
 }
 
 @media (max-width: 700px) {

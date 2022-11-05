@@ -28,7 +28,10 @@ function App() {
       <main className='main'>
         <div className='section' id='presentation'>
           <p>
-            Hi, my name is Mathys Gasnier, i love programming since i was a kid. I started with java, and i evolved to others technologies like javascript and c++. I love programming because it gives me challenge and makes me think outside the box. In my career i would like to manage teams or even projects.
+            Hi, my name is Mathys Gasnier, I love programming since i was a kid. 
+            I started my journey with Java, and I have discovered many other technologies such as Javascript and C++. 
+            I love programming because it gives me challenge and forces me to think outside the box. 
+            In my career i would like to architect and manage teams or even projects.
           </p>
         </div>
         <div className='section' id='techno'>
@@ -78,7 +81,7 @@ function App() {
               description='A web page to replace the default browser new tab page. Has an animated background, a configurable search bar and a time display'
               backgroundImage={newtab}
               links={[
-                { link: 'google.com', img: openNew },
+                { link: 'https://newtab.mgasnier.fr', img: openNew },
                 { link: 'https://github.com/mateoox600/NewTab', img: github }
               ]}
             />
