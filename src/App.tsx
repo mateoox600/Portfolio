@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './header/Header';
 import Project from './project/Project';
 import './App.css';
@@ -18,13 +18,23 @@ import cxplorer from './projects/c-xplorer.png';
 import newtab from './projects/newtab.png';
 
 import openNew from './icons/openNew.svg';
+import arrowDown from './icons/downArrow.svg';
 import github from './icons/github.png';
 import linkedIn from './icons/linkedIn.png';
 
 function App() {
+
+  const [ scrolling, setScrolling ] = useState(false);
+
+  window.addEventListener('scroll', () => {
+      if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) setScrolling(true);
+      else setScrolling(false);
+  });
+
   return (
     <div className="App">
       <Header />
+      <a id='down' className={scrolling ? 'scrolling' : ''} href="#techno"><img src={arrowDown} alt="Down" /></a>
       <main className='main'>
         <div className='section' id='presentation'>
           <p>

@@ -4,6 +4,41 @@
   min-height: 200vh;
 }
 
+#down {
+  background-color: #20203f;
+  position: absolute;
+  bottom: 10vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 7.5vh;
+  height: 7.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+#down>img {
+  width: 6.5vh;
+  height: 6.5vh;
+  margin-top: 3px;
+}
+
+#down:hover {
+  bottom: 8vh !important;
+  padding: 1vh;
+  background-color: #2b2b4d;
+}
+
+#down.scrolling {
+  bottom: 0vh;
+  background-color: #20203f00 !important;
+}
+
+#down.scrolling>img {
+  opacity: 0;
+}
 
 .header-spacer {
   width: 100vw;
@@ -78,6 +113,15 @@
   background-color: #20203f;
   border: #0b0b1b 1px solid;
   transition: all 0.25s ease-in-out;
+}
+
+.technos>img:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 20px;
+    border-bottom: 3px solid white;
 }
 
 .technos>img:hover {
