@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import menu from './menu.svg';
 import './Header.css';
+import github from '../icons/github.png';
+import linkedIn from '../icons/linkedIn.png';
 
 export default function Header() {
 
@@ -18,7 +20,10 @@ export default function Header() {
                 <a href='#presentation' className='nav-item'>Presentation</a>
                 <a href="#techno" className='nav-item'>Knowledge</a>
                 <a href='#projects' className='nav-item'>Projects</a>
-                <a href='#contact' className='nav-item'>Contact</a>
+                <div className='nav-item' id='contacts'>
+                    <a className='contacts-link' href="https://github.com/mateoox600" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
+                    <a className='contacts-link' href="https://www.linkedin.com/in/mathys-g" target='_blank' rel='noreferrer'><img src={linkedIn} alt="" /></a>
+                </div>
             </div>
             <div className='burger-nav'>
                 <img className='burger-menu' src={menu} alt="" />

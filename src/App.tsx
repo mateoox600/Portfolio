@@ -20,7 +20,6 @@ import newtab from './projects/newtab.png';
 import openNew from './icons/openNew.svg';
 import arrowDown from './icons/downArrow.svg';
 import github from './icons/github.png';
-import linkedIn from './icons/linkedIn.png';
 
 function App() {
 
@@ -95,13 +94,6 @@ function App() {
                 { link: 'https://github.com/mateoox600/NewTab', img: github }
               ]}
             />
-          </div>
-        </div>
-        <div className='section' id='contact'>
-          <h1 className='contact-title'>Contact Me</h1>
-          <div className='contacts'>
-            <a className='contact-link' href="https://github.com/mateoox600" target='_blank' rel='noreferrer'><img src={github} alt="" /></a>
-            <a className='contact-link' href="https://www.linkedin.com/in/mathys-g" target='_blank' rel='noreferrer'><img src={linkedIn} alt="" /></a>
           </div>
         </div>
       </main>

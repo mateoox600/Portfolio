@@ -37,11 +37,89 @@
 }
 
 .nav-item {
-    margin-right: 15px;
-    padding: 10px;
+    margin-right: 25px;
+    padding: 2.5px;
     cursor: pointer;
     font-size: 1.5em;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.nav-item {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    height: 1.60em;
+}
+
+a.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: calc(100% - 7.5px);
+    height: 0.1em;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+a.nav-item:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+#contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 10px;
+    margin-left: -5px;
+}
+
+.contacts-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4vh;
+  height: 4vh;
+  aspect-ratio: 1/1;
+  margin-right: -2px;
+  padding: 1.25vh;
+  border-left: 2px transparent solid;
+  border-right: 2px transparent solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.contacts-link>img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-height: 700px) {
+    
+    .contacts-link {
+        width: 6vh;
+        height: 6vh;
+    }
+
+}
+
+.contacts-link:hover {
+  border-left: 2px white solid;
+  border-right: 2px white solid;
+}
+
+.header.scrolling .contacts-link {
+    width: 2.5vh;
+    height: 2.5vh;
+    padding: 1vh;
 }
 
 .burger-nav {

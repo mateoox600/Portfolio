@@ -150,52 +150,6 @@
   flex-wrap: wrap;
 }
 
-
-#contact {
-  min-height: 35vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 5vh;
-}
-
-.contact-title {
-  margin: 2vw;
-  font-size: 3vw;
-}
-
-.contacts {
-  min-height: 25vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.contact-link {
-  display: block;
-  width: 5vw;
-  aspect-ratio: 1/1;
-  padding: 2vw;
-  margin: 0.5vw;
-  border-radius: 15px;
-  background-color: #20203f;
-  border: #0b0b1b 1px solid;
-  transition: all 0.25s ease-in-out;
-}
-
-.contact-link>img {
-  width: 100%;
-}
-
-.contact-link:hover {
-  background-color: #2b2b4d;
-  transform: scale(1.1);
-}
-
 footer {
   height: 100px;
   display: flex;
