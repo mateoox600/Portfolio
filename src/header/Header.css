@@ -132,7 +132,6 @@ a.nav-item:hover::after {
 }
 
 .burger-item {
-    display: none;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -155,11 +154,15 @@ a.nav-item:hover::after {
     }
 
     .burger-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10000;
         width: 100px;
         height: 100px;
         box-sizing: border-box;
         padding: 25px;
-        fill: white;
+        cursor: pointer;
     }
 
     .scrolling .burger-menu {
@@ -168,34 +171,104 @@ a.nav-item:hover::after {
         padding: 5px;
     }
     
-    .burger-menu:hover + .menu, .menu:hover {
+    .menu {
         display: flex;
         flex-direction: column;
-    }
-
-    .burger-menu:hover + .menu .burger-item, .menu:hover .burger-item {
-        display: block;
-    }
-    
-    .menu {
+        align-items: flex-end;
         z-index: 1000;
         position: absolute;
-        top: 100px;
+        top: 0;
         right: 0;
+        height: 100vh;
+        width: 96vw;
         padding: 2vw;
-        background: radial-gradient(circle, hsla(240, 54%, 7%, 1) 0%, hsla(240, 35%, 11%, 0) 50%);
+        padding-top: 100px;
+        background: linear-gradient(-90deg, #08081b 35%, #12122600 100%);
+        transition: opacity 0.4s ease-in-out;
+        opacity: 0;
     }
     
-    .scrolling .menu {
-        top: 50px;
+    .menu.open {
+        opacity: 1;
     }
     
     .burger-item {
+        position: relative;
         margin: 1vw;
         padding: 1vw;
         cursor: pointer;
         font-size: 2em;
+        opacity: 0;
+        transition-property: opacity;
+        transition-delay: 250ms;
+        transition-duration: 150ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    a.burger-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 1vw;
+        width: calc(100% - 2vw);
+        height: 0.1em;
+        background-color: white;
+        transition: all 300ms ease-in-out;
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: center;
+    }
+
+    a.burger-item:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    .burger-item.disabled {
+        cursor: default;
+        pointer-events: none;
+        user-select: none;
     }
     
+    .menu.open .burger-item {
+        opacity: 1;
+    }
+
+    #burger-contacts {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .burger-contacts-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4vh;
+        height: 4vh;
+        aspect-ratio: 1/1;
+        margin-right: -2px;
+        padding: 1.25vh;
+        border-left: 2px transparent solid;
+        border-right: 2px transparent solid;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger-contacts-link>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-height: 700px) {        
+        .burger-contacts-link {
+            width: 6vh;
+            height: 6vh;
+        }
+
+    }
+
+    .burger-contacts-link:hover {
+        border-left: 2px white solid;
+        border-right: 2px white solid;
+    }
     
 }
